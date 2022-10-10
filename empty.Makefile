@@ -16,7 +16,7 @@ all: debug
 PROJECTNAME = empty
 ARM_GCC_DIR_WIN = C:/SiliconLabs/SimplicityStudio/v5/developer/toolchains/gnu_arm/10.2_2020q4
 ARM_GCC_DIR_OSX = 
-ARM_GCC_DIR_LINUX = 
+ARM_GCC_DIR_LINUX = /SimplicityStudio_v5/developer/toolchains/gnu_arm/10.2_2020q4
 
 # Pre-defined definitions in this file
 ifeq ($(OS),Windows_NT)

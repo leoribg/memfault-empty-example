@@ -3,7 +3,12 @@
 # Makefile Version 10                                              #
 ####################################################################
 
-BASE_SDK_PATH = C:/Users/leonardo/SimplicityStudio/SDKs/gecko_sdk_2
+ifeq ($(OS),Windows_NT)
+  BASE_SDK_PATH = C:/Users/leonardo/SimplicityStudio/SDKs/gecko_sdk_2
+else
+  BASE_SDK_PATH = /SDKs/gecko_sdk_3
+endif
+
 UNAME:=$(shell uname -s | sed -e 's/^\(CYGWIN\).*/\1/' | sed -e 's/^\(MINGW\).*/\1/')
 ifeq ($(UNAME),MINGW)
 # Translate "C:/super" into "/C/super" for MinGW make.
